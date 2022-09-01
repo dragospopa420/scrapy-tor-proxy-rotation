@@ -22,7 +22,7 @@ class TorProxyMiddleware(object):
         if not crawler.settings.getbool('TOR_IPROTATOR_ENABLED', False):
             raise NotConfigured()
 
-        max_count = crawler.settings.getint('TOR_IPROTATOR_CHANGE_AFTER', 1000)
+        max_count = crawler.settings.getint('TOR_IPROTATOR_CHANGE_AFTER', 100)
         allow_reuse_ip_after = crawler.settings.getint('TOR_IPROTATOR_ALLOW_REUSE_IP_AFTER', 10)
 
         mw = cls(max_count=max_count, allow_reuse_ip_after=allow_reuse_ip_after)
