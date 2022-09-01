@@ -89,7 +89,7 @@ class TorController:
                 return new_ip
 
             # Wait a random time to try again
-            time.sleep(random.randint(5,30))
+            time.sleep(random.randint(5,20))
 
         # Could not change IP
         return '' 
